@@ -16,7 +16,7 @@ module.exports = {
       WHERE openid=? AND team_id=?;
     `, [openid, team_id]);
 
-    if (!res) return 0;
+    if (res.length === 0) return 0;
     else return res[0].status;
   },
 
