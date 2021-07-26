@@ -32,8 +32,8 @@ module.exports = appInfo => {
       database: 'dev.db'
     },
     weapp: {
-      appid: "wx56b313738beeb647",
-      secret: "e6995785b688fbf5b968821026f990b4"
+      appid: "wx8c6e1ee4c3a81369",
+      secret: "52407ec6e4ce5ab916ff9e226a5d28c9"
     },
     jwt: {
       secret: "adfadnvzx02<DISx,sssdu239"
