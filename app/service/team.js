@@ -53,6 +53,7 @@ class TeamService extends Service {
   async updateMember({ team_id, openid, status }) {
     const { ctx } = this;
     const currentStatus = await ctx.helper.memberStatus({ team_id });
+    if (currentStatus === 2 && status === 1 && team_id === 0) { return; }
     if (status === -1) { // application
       assert(openid === ctx.user.openid);
     } else if (status === 0) {
