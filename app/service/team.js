@@ -59,7 +59,7 @@ class TeamService extends Service {
     } else if (status === 0) {
       assert(openid === ctx.user.openid || currentStatus === 2);
     } else if (status === 1) {
-      assert(currentStatus === 2);
+      assert(team_id === 0 || currentStatus === 2);
     } else {
       assert(false);
     }

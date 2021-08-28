@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.body = 'This page is intentionally left blank.';
+    ctx.body = '网站备案号<a href="https://beian.miit.gov.cn">苏ICP备2021037326号-1</a>';
   }
 
   async login () {
@@ -34,6 +34,7 @@ class HomeController extends Controller {
     const { ctx } = this;
     const { nickname, avatarUrl, alias } = ctx.request.body;
     const newUser = await ctx.service.user.update({ nickname, avatarUrl, alias });
+    console.log(newUser);
     ctx.body = newUser;
   }
 
