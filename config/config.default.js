@@ -52,6 +52,7 @@ module.exports = appInfo => {
 // create table user (openid text primary key not null, nickname text not null, alias text, avatar_url text not null);
 // create table team (team_id INTEGER PRIMARY KEY, name text not null);
 // create table team_member (team_id INTEGER not null, openid text not null, status integer not null, primary key (team_id, openid));
+// create table step_like (givr_openid text not null, recv_openid text not null, date date not null, state int, primary key (givr_openid, recv_openid, date));
 // status: 0: deleted, -1: pending application, 1: member, 2: admin
 
 // insert into user (openid, nickname, alias, avatar_url) values ('dog', 'Dog', 'Dog', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI2wpwDvdHeibgdI9ybwKrz3JdvNgHnshezknOXcQxRG76ibtygwr8khdfFLibXyFRiaQ3OCjic1rtKyRg/132');

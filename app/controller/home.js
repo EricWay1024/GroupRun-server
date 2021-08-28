@@ -30,6 +30,12 @@ class HomeController extends Controller {
     ctx.body = { stepData };
   }
 
+  async likeStep () {
+    const { ctx } = this;
+    const { date, recv_openid, state } = ctx.request.body;
+    const res = await ctx.service.step.like({ date, recv_openid, state });
+    ctx.body = { res };
+  }
   async updateUser() {
     const { ctx } = this;
     const { nickname, avatarUrl, alias } = ctx.request.body;
