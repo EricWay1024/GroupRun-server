@@ -12,6 +12,7 @@ module.exports = app => {
   router.post('/user/get', auth, controller.home.getUser);
   router.post('/step/update', auth, controller.home.updateStep);
   router.post('/step/get', auth, controller.home.getStep);
+  router.post('/step/like', auth, controller.home.likeStep);
   router.post('/team/get', auth, controller.home.getTeam);
   router.post('/team/create', auth, controller.home.createTeam);
   router.post('/team/updateMember', auth, controller.home.updateMember);
